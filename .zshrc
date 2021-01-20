@@ -195,7 +195,7 @@ alias pi-down='sudo wg-quick down pi'
 #alias c="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &; clear"
 
 alias netprocs="lsof -P -i -n"
-alias up="sudo apt update && sudo apt upgrade"
+alias up="sudo pacman -Syu"
 # So that sudo doesnt override aliases (doesnt work with flags)
 # alias sudo='sudo '
 
