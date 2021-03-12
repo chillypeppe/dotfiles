@@ -89,6 +89,7 @@ set number
 set splitbelow
 set splitright
 set noshowmode
+set t_ut=
 map <F6> :tabp<CR>
 map <F7> :tabn<CR>
 map <C-K> :5winc +<CR>
