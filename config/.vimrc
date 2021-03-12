@@ -1,10 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
-Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-surround'
+Plug 'dense-analysis/ale'
 	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plug 'drewtempelmeyer/palenight.vim'
