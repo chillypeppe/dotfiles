@@ -7,7 +7,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 Plug 'drewtempelmeyer/palenight.vim'
@@ -70,6 +70,7 @@ function! LightlineFiletype()
 		\ &filetype
 endfunction
 
+let g:asmsyntax = 'nasm'
 set termguicolors
 set background=dark
 colorscheme palenight
@@ -83,6 +84,11 @@ set splitbelow
 set splitright
 set noshowmode
 set t_ut=
+set mouse=a
+set undofile
+set undodir=$HOME/.vim/undo
+set clipboard=unnamed
+hi CocErrorFloat ctermfg=DarkRed
 map <F6> :tabp<CR>
 map <F7> :tabn<CR>
 map <C-K> :5winc +<CR>
@@ -94,10 +100,6 @@ map <C-T> :terminal<CR>
 nnoremap <Leader>c :set cursorline!<CR>
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 tnoremap <Esc> <C-\><C-n>
-augroup project
-	autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
-augroup END
 function! YRRunAfterMaps()
 	nnoremap Y	:<C-U>YRYankCount 'y$'<CR>
 endfunction
