@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 so	~/.vim/coc.vim
+so ~/.vim/hexmode.vim
 let g:lightline = {
 		\ 'colorscheme': 'palenight',
 		\ 'active': {
@@ -71,6 +72,7 @@ function! LightlineFiletype()
 endfunction
 
 let g:asmsyntax = 'nasm'
+
 set termguicolors
 set background=dark
 colorscheme palenight
@@ -89,12 +91,9 @@ set undofile
 set undodir=$HOME/.vim/undo
 set clipboard=unnamed
 hi CocErrorFloat ctermfg=DarkRed
-map <F6> :tabp<CR>
-map <F7> :tabn<CR>
-map <C-K> :5winc +<CR>
-map <C-J> :5winc -<CR>
-map <C-H> :5winc <<CR>
-map <C-L> :5winc ><CR>
+nnoremap <C-H> :Hexmode<CR>
+inoremap <C-H> <Esc>:Hexmode<CR>
+vnoremap <C-H> :<C-U>Hexmode<CR>
 map <C-N> :NERDTreeToggle<CR>
 map <C-T> :terminal<CR>
 nnoremap <Leader>c :set cursorline!<CR>
@@ -105,4 +104,3 @@ function! YRRunAfterMaps()
 endfunction
 nnoremap Y y$
 autocmd StdinReadPre * let s:std_in=1
-
