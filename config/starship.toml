@@ -104,9 +104,9 @@ renamed = "[](fg:#4A4A4A)[Renamed:${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
 deleted = "[](fg:#4A4A4A)[✗${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
 untracked = "[](fg:#4A4A4A)[?${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
 stashed = "[](fg:#4A4A4A)[*${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
-ahead = "[](fg:#4A4A4A)[⇡${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
-behind = "[](fg:#4A4A4A)[⇣${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
-diverged = "[](fg:#4A4A4A)[Diverged:${count}נּ](bg:#4A4A4A)[${ahead_count}][⇠:${behind_count}][](fg:#4A4A4A)"
+ahead = "[](fg:#4A4A4A)[⇡${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+behind = "[](fg:#4A4A4A)[⇣${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+diverged = "[](fg:#4A4A4A)[Diverged:${count}נּ](bg:#4A4A4A)[${ahead_count}][⇠:${behind_count}][](fg:#4A4A4A)"
 
 [shlvl]
 #disabled = true
