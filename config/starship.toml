@@ -1,74 +1,211 @@
-# Disable the newline at the start of the prompt
+# Custom Colors
 add_newline = false
 
+[character]
+#disabled = true
+#style = "bold bg:#4A4A4A fg:#EEFFFF"
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = ""
+use_symbol_for_status = true
+
+[directory]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[$read_only ]($style)[$path ]($style)[](fg:#4A4A4A)"
+read_only=" "
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+
+[hostname]
+disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+ssh_only = false
+trim_at = ".local"
+
+[username]
+disabled = true
+style_user = "bold bg:#4A4A4A fg:#EEFFFF"
+style_root = "bold bg:#4A4A4A fg:#fb4934"
+format = "[ $user]($style)"
+show_always = true
+
+[cmd_duration]
+disabled = false
+style = "bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[ ]($style)[$duration]($style)[](fg:#4A4A4A)"
+show_notifications = true
+min_time_to_notify = "9999"
+
+[time]
+disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[ ]($style)[$time]($style)[](fg:#4A4A4A)"
+time_format = "%T"
+utc_time_offset = "1"
+time_range = "00:00:00-06:00:00"
+
+[memory_usage]
+disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[$symbol]($style)[${ram}( | ${swap}) ]($style)[](fg:#4A4A4A)"
+symbol = "  "
+threshold = 0
+
+[battery]
+disabled = false
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+unknown_symbol = "  "
+empty_symbol = "  "
+discharging_symbol = "  "
+charging_symbol = "  "
+full_symbol = "  "
+        [[battery.display]]
+        threshold = 10
+        style = "bold fg:#fb4934"
+
+        [[battery.display]]
+        threshold = 30
+        style = "bold fg:#fe8019"
+
+        [[battery.display]]
+        threshold = 50
+        style = "bold fg:#fabd2f"
+
+        
+
+# VCS
+[git_branch]
+#disabled = true
+symbol = " "
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[$symbol$branch]($style)[](fg:#4A4A4A)"
+
+[git_commit]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[ ﰖ $hash]($style)[](fg:$style) "
+
+[git_state]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "[](fg:#4A4A4A)[State:($state( $progress_current/$progress_total))]($style)[](fg:$style) "
+am = "APPLYING-MAILBOX"
+am_or_rebase = "APPLYING-MAILBOX/REBASE"
+
+[git_status]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind)"
+conflicted = "[](fg:#4A4A4A)[~${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+staged = "[](fg:#4A4A4A)[+${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+modified = "[](fg:#4A4A4A)[!${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+renamed = "[](fg:#4A4A4A)[Renamed:${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+deleted = "[](fg:#4A4A4A)[✗${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+untracked = "[](fg:#4A4A4A)[?${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+stashed = "[](fg:#4A4A4A)[*${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+ahead = "[](fg:#4A4A4A)[⇡${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+behind = "[](fg:#4A4A4A)[⇣${count}](bg:#4A4A4A)[](fg:#4A4A4A)"
+diverged = "[](fg:#4A4A4A)[Diverged:${count}נּ](bg:#4A4A4A)[${ahead_count}][⇠:${behind_count}][](fg:#4A4A4A)"
+
+[shlvl]
+#disabled = true
+disabled = false
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
+symbol = " "
+
+[env_var]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = " gambling with [$env_value]($style)"
+variable = "GAMBLE_TEST_COMMAND"
+
 [aws]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
 [conda]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
 [dart]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
-[directory]
-read_only = " "
-
-[docker]
-symbol = " "
-
 [elixir]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
 [elm]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
-[git_branch]
-symbol = " "
-
 [golang]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
-[haskell]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
 [java]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
 [nix_shell]
-symbol = " "
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
+symbol = " "
 
 [nodejs]
-symbol = " "
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)[](fg:#4A4A4A)[$symbol$version]($style)[](fg:#4A4A4A)"
+symbol = " "
 
 [package]
-symbol = " "
-
-[perl]
-symbol = " "
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)[](fg:#4A4A4A)[$symbol$version]($style)[](fg:#4A4A4A)"
 
 [php]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
 symbol = " "
 
 [python]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)[](fg:#4A4A4A)[${symbol}${pyenv_prefix}${version}($virtualenv)]($style)[](fg:#4A4A4A)"
 symbol = " "
 
+[lua]
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)[](fg:#4A4A4A)[${symbol}${version}]($style)[](fg:#4A4A4A)"
+symbol = " "
+
 [ruby]
-symbol = " "
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
+symbol = " "
 
 [rust]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
+#disabled = true
+style = "bold bg:#4A4A4A fg:#EEFFFF"
+format = "($style)"
+symbol = "  "
