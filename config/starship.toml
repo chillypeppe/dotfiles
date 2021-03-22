@@ -77,7 +77,7 @@ full_symbol = "  "
 # VCS
 [git_branch]
 #disabled = true
-symbol = " "
+symbol = " "
 style = "bold bg:#4A4A4A fg:#EEFFFF"
 format = "[](fg:#4A4A4A)[$symbol$branch]($style)[](fg:#4A4A4A)"
 
