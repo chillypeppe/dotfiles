@@ -13,7 +13,7 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
 
 # Window kill command
 bindsym $mod+Shift+q kill
@@ -227,14 +227,14 @@ exec --no-startup-id copyq
 # exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --cuts
 #exec --no-startup-id i3status
-exec --no-startup-id redshift-gtk 
+exec --no-startup-id redshift
 # Theme
 # class                 border  	backgr. 	text    	indic.  	child_border
 # My colors
   client.background '#1e1e20'
-  client.focused '#cbd1cd #1e1e20 #cbd1cd #7c7c7c #7c7c7c'
-  client.unfocused '#cbd1cd #1e1e20 #cbd1cd #5d5e5d #5d5e5d'
-  client.focused_inactive '#cbd1cd #1e1e20 #cbd1cd #5d5e5d #5d5e5d'
+  client.focused '#cbd1cd #1e1e20 #cbd1cd #a5a5a5 #a5a5a5'
+  client.unfocused '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
+  client.focused_inactive '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
   client.urgent '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
   client.placeholder '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
 
@@ -291,8 +291,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 
 # Use pactl to adjust volume in PulseAudio. 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status 
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
