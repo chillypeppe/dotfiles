@@ -17,7 +17,6 @@ SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:89DDFF
 SETUVAR fish_color_param:EEFFFF
-SETUVAR fish_color_params:A8B5B5
 SETUVAR fish_color_quote:FFCB6B
 SETUVAR fish_color_redirection:EEFFFF
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
