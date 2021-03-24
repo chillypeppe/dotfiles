@@ -3,7 +3,7 @@ set $mod Mod4
 new_window pixel 1
 new_float normal
 
-hide_edge_borders none
+hide_edge_borders both
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
@@ -91,6 +91,7 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+set $ws9 9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -101,6 +102,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
