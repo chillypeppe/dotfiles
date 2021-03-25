@@ -1,6 +1,6 @@
 # Neovim config
 
-![](./nvim.png)
+This config was inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s
 
 ## Important plugins
 
