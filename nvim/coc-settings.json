@@ -1,0 +1,6 @@
+{
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
+  "python.formatting.blackArgs": ["-l", "120"],
+  "coc.preferences.formatOnSaveFiletypes": ["python"]
+}

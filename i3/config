@@ -22,7 +22,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/cuts/scripts/rofi/launcher.rasi
 
 # Area selection to clipboard
-bindsym --release $mod+Shift+s exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/screenshots/$(date +%F-%H:%M:%S).png"
+bindsym --release $mod+Shift+s exec --no-startup-id flameshot gui
 # change focus
 
 bindsym $mod+Left focus left
@@ -113,6 +113,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -123,6 +124,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 
 # Assign windows to workspaces
 assign [class="firefox"] $ws2
@@ -154,10 +156,8 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable border normal
-for_window [class="firefox"] border none
 for_window [class="Tor Browser"] floating enable
 for_window [class="copyq"] floating enable
 
@@ -223,6 +223,7 @@ mode "resize" {
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id dunst
 exec --no-startup-id copyq
+exec --no-startup-id flameshot
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
@@ -232,11 +233,18 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh --cuts
 exec --no-startup-id redshift
 # Theme
 # class                 border  	backgr. 	text    	indic.  	child_border
+## My colors backup
+#  client.background '#1e1e20'
+#  client.focused '#cbd1cd #1e1e20 #cbd1cd #a5a5a5 #a5a5a5'
+#  client.unfocused '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
+#  client.focused_inactive '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
+#  client.urgent '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
+#  client.placeholder '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
 # My colors
   client.background '#1e1e20'
-  client.focused '#cbd1cd #1e1e20 #cbd1cd #a5a5a5 #a5a5a5'
-  client.unfocused '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
-  client.focused_inactive '#cbd1cd #1e1e20 #cbd1cd #4A4A4A #4A4A4A'
+  client.focused '#cbd1cd #1e1e20 #cbd1cd #D8DEE9 #D8DEE9'
+  client.unfocused '#cbd1cd #1e1e20 #cbd1cd #2E3440 #2E3440'
+  client.focused_inactive '#cbd1cd #1e1e20 #cbd1cd #2E3440 #2E3440'
   client.urgent '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
   client.placeholder '#cbd1cd #1e1e20 #cbd1cd #919893 #919893'
 
