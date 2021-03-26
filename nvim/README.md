@@ -2,6 +2,8 @@
 
 _This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s_
 
+![preview](https://user-images.githubusercontent.com/43646324/112695566-a16c7900-8e84-11eb-8557-667b5dbde2f5.png)
+
 ## Installation
 
 - Install neovim, obviously
