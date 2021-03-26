@@ -4,16 +4,13 @@ _This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/n
 
 ## Installation
 
-- neovim, obviously
+- Install neovim, obviously
 
-- Copy all files in this folder to `~/.config/nvim/`
+- Copy all files from this folder to `~/.config/nvim/`
 
-- pynvim
-	Install pynvim with `pip install --upgrade pynvim`
-- nvim plugins
-	As soon as you start nvim it will show many warnings. Just run `:PlugInstall` to install the recessary plugins. 
-- clangd
-	Run `:CocCommand clangd.install` inside nvim to install clangd for linting C code.
+- Install pynvim with `pip install --upgrade pynvim`
+- As soon as you start nvim it will show many warnings. Just run `:PlugInstall` inside nvim to install the recessary plugins.
+- Run `:CocCommand clangd.install` inside nvim to install clangd for linting C code.
 
 ## Important plugins
 
