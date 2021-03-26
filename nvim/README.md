@@ -1,6 +1,8 @@
 # Neovim config
 
-This config was inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s
+_This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s_
+
+## 
 
 ## Important plugins
 

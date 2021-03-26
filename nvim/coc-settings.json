@@ -2,5 +2,8 @@
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
   "python.formatting.blackArgs": ["-l", "120"],
-  "coc.preferences.formatOnSaveFiletypes": ["python"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python"
+  ],
+  "clangd.path": "/home/lorenzo/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }

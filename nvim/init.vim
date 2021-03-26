@@ -149,10 +149,14 @@ set scrolloff=5
 set cursorline
 set colorcolumn=80
 set nofoldenable
+set mouse=a
 set number relativenumber
 set undofile
 set undodir=$HOME/.vim/undo
 set clipboard=unnamed
+
+" Asm syntax
+let g:asmsyntax = 'nasm'
 
 "Hexmode
 so ~/.config/nvim/ftplugin/hexmode.vim
@@ -241,10 +245,20 @@ augroup END
 "endif
 "
 " Template for different files type
-autocmd BufNewFile *.c r $HOME/.config/nvim/templates/t.c
+if has("autocmd")
+  augroup templates
+	autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
+	autocmd BufNewFile *.asm 0r ~/.config/nvim/templates/skeleton.asm
+	autocmd BufNewFile *.sh 0r ~/.config/nvim/templates/skeleton.sh
+  augroup END
+endif
+
 "
 " CoC config
-hi CocErrorFloat guifg=#f25445
+hi CocErrorFloat guifg=#fc7681
+hi CocErrorSign guifg=#E06C75
+hi CocFloating guibg=#40454f
+hi CocHintFloat guifg=#56B6C2
 let g:coc_global_extensions = [
 			\ 'coc-pyright',
 			\ 'coc-snippets',
@@ -264,7 +278,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+"set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
