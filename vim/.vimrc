@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-
+ 
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf.vim'
@@ -7,22 +7,29 @@ Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-"Plug 'dense-analysis/ale'
 	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Lint di fallback
+"Plug 'dense-analysis/ale'
+
+"Themes
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 so	~/.vim/coc.vim
 so ~/.vim/hexmode.vim
 let g:lightline = {
-		\ 'colorscheme': 'palenight',
+		\ 'colorscheme': 'gruvbox',
 		\ 'active': {
 		\	'right': [ [ 'length' ],
 		\				[ 'percent', 'lineinfo' ],
-		\				[ 'info', 'fileformat', 'fileencoding', 'filetype' ] ],
+		\				[ 'info', 'fileencoding', 'filetype' ] ],
 		\	'left': [ [ 'mode', 'paste' ],
 		\			  [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
 		\ },
@@ -32,13 +39,24 @@ let g:lightline = {
 		\ },
        	\ 'component': {
 		\	'readonly': '%{&readonly?" ":""}',
-		\	'info' : ' arch  ',
-		\	'fileformat' : '%{&fileformat}  ',
-		\	'length' : '%{&lines}  ',
-		\	'fileencoding' : '%{&fileencoding}  '
+		\	'length' : '%{&lines} ',
+		\	'fileencoding' : '%{&fileencoding} '
 		\ },
 	    \ 'separator': { 'left': '', 'right': '' },
         \ 'subseparator': { 'left': '', 'right': '' },
+		\ 'mode_map': {
+		\ 'n' : '<N>',
+		\ 'i' : '<I>',
+		\ 'R' : '<R>',
+		\ 'v' : '<V>',
+		\ 'V' : '<Vl>',
+		\ "\<C-v>": '<Vb>',
+		\ 'c' : '<C>',
+		\ 's' : '<S>',
+		\ 'S' : '<Sl>',
+		\ "\<C-s>": '<Sb>',
+		\ 't': '<T>',
+		\ }
 		\ }
 
 function! LightlineGitbranch()
@@ -71,11 +89,14 @@ function! LightlineFiletype()
 		\ &filetype
 endfunction
 
+" uso sintassi nasm con i file .asm
 let g:asmsyntax = 'nasm'
 
+"Themes
+"let g:gruvbox_contrast_dark = 'hard'
 set termguicolors
 set background=dark
-colorscheme palenight
+colorscheme gruvbox
 set laststatus=2
 set tabstop=4
 set softtabstop=4
