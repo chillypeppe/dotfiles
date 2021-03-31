@@ -115,7 +115,7 @@ call plug#end()
 function! BufNr() abort
 	let l:bufnr = bufnr('%')
 	let l:bufnr = l:bufnr > 10 ? l:bufnr : nr2char(10121 + l:bufnr).' '
-	return ' '.l:bufnr."   ".winnr().' '
+	return ' '.l:bufnr."  ".winnr().' '
 endfunction
 
 function! FileType() abort
