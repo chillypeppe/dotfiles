@@ -15,7 +15,6 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) &&
 			\ exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && 
 			\ b:NERDTree.isTabTree()) | q | endif
-"Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'liuchengxu/vista.vim'
 let g:vista#renderer#enable_icon = 0
 Plug 'tpope/vim-fugitive'
@@ -23,7 +22,6 @@ Plug 'petRUShka/vim-sage'
 Plug 'daeyun/vim-matlab'
 Plug 'rhysd/vim-grammarous'
 "Plug 'sheerun/vim-polyglot'
-"Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'liuchengxu/vim-clap'
 map <space>b :Clap buffers<CR>
@@ -38,8 +36,8 @@ map <space>w :Clap windows<CR>
 map <space>y :Clap yanks<CR>
 map <space>p :Clap proj_tags<CR>
 autocmd User ClapOnExit call lightline#update()
-Plug 'rhysd/vim-grammarous'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript']
 Plug 'matze/vim-move'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 nnoremap <silent> <space> :WhichKey '<space>'<CR>
@@ -90,8 +88,6 @@ let g:lightline = {
 " Colorschemes
 Plug 'sainnhe/sonokai'
 let g:sonokai_style = 'atlantis'
-Plug 'sainnhe/edge'
-let g:edge_style = 'neon'
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 let g:gruvbox_material_background = 'medium'
 Plug 'joshdick/onedark.vim'
@@ -100,17 +96,8 @@ Plug 'ayu-theme/ayu-vim' " or other package manager
 let ayucolor="mirage" " for mirage version of theme
 Plug 'liuchengxu/space-vim-theme'
 Plug 'rakr/vim-one'
-Plug 'rhysd/vim-grammarous'
 Plug 'lervag/vimtex'
 let g:tex_flavor = 'latex'
-Plug 'preservim/nerdcommenter'
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-map <space>c <leader>c<space>
-
-"Plug 'tpope/vim-sleuth'
-
 call plug#end()
 
 function! BufNr() abort
@@ -162,8 +149,7 @@ let g:asmsyntax = 'nasm'
 "Hexmode
 so ~/.config/nvim/ftplugin/hexmode.vim
 nnoremap <space>h :Hexmode<CR>
-vnoremap <space>h :<C-U>Hexmode<CR>
-"
+vnoremap <space>h :<C-U>Hexmode<CR> "
 " Custom Shortcuts
 nmap D d$
 nmap Y y$

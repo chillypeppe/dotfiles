@@ -1,23 +1,12 @@
 # Neovim config
 
-_This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s_
-
-![preview](https://user-images.githubusercontent.com/43646324/112695566-a16c7900-8e84-11eb-8557-667b5dbde2f5.png)
-
-## Installation
-
-- Install neovim, obviously
-
-- Copy all files from this folder to `~/.config/nvim/`
-
-- Install pynvim with `pip install --upgrade pynvim`
-- As soon as you start nvim it will show many warnings. Just run `:PlugInstall` inside nvim to install the recessary plugins.
-- Run `:CocCommand clangd.install` inside nvim to install clangd for linting C code.
+![](./nvim.png)
 
 ## Important plugins
 
 The most important plugins I use are [coc.nvim](https://github.com/neoclide/coc.nvim),
 [vim-clap](https://github.com/liuchengxu/vim-clap) and [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+"
 
 ### General custom shortcuts
 
@@ -42,6 +31,35 @@ We can open the files inside vim-clap in various mode:
 <C-X> -> Open file horizontally.
 <C-T> -> Open file in new tab.
 ```
+
+#### Vim Multiple Cursors
+
+### Quick Start
+#### normal mode / visual mode
+  * start:          `<C-n>` start multicursor and add a _virtual cursor + selection_ on the match
+    * next:         `<C-n>` add a new _virtual cursor + selection_ on the next match
+    * skip:         `<C-x>` skip the next match
+    * prev:         `<C-p>` remove current _virtual cursor + selection_ and go back on previous match
+  * select all:     `<A-n>` start multicursor and directly select all matches
+
+You can now change the _virtual cursors + selection_ with **visual mode** commands.
+For instance: `c`, `s`, `I`, `A` work without any issues.
+You could also go to **normal mode** by pressing `v` and use normal commands there.
+
+At any time, you can press `<Esc>` to exit back to regular Vim.
+
+**NOTE**: start with `g<C-n>` to match without boundaries (behaves like `g*` instead of `*`)
+
+#### visual mode when multiple lines are selected
+  * start: `<C-n>` add _virtual cursors_ on each line
+
+You can now change the _virtual cursors_ with **normal mode** commands.
+For instance: `ciw`.
+
+#### command
+The command `MultipleCursorsFind` accepts a range and a pattern (regexp), it creates a _visual cursor_ at the end of each match.
+If no range is passed in, then it defaults to the entire buffer.
+
 
 #### Coc 
 
