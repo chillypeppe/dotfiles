@@ -103,7 +103,7 @@ call plug#end()
 function! BufNr() abort
 	let l:bufnr = bufnr('%')
 	let l:bufnr = l:bufnr > 10 ? l:bufnr : nr2char(10121 + l:bufnr).' '
-	return ' '.l:bufnr."  ".winnr().' '
+	return ' '.l:bufnr."   ".winnr().' '
 endfunction
 
 function! FileType() abort
@@ -237,6 +237,7 @@ if has("autocmd")
 	autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
 	autocmd BufNewFile *.asm 0r ~/.config/nvim/templates/skeleton.asm
 	autocmd BufNewFile *.sh 0r ~/.config/nvim/templates/skeleton.sh
+	autocmd BufNewFile *.py 0r ~/.config/nvim/templates/skeleton.py
   augroup END
 endif
 
