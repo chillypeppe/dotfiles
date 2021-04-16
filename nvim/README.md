@@ -1,6 +1,17 @@
 # Neovim config
 
-![](./nvim.png)
+_This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/neovim-config)'s_
+
+![preview](https://user-images.githubusercontent.com/43646324/112695566-a16c7900-8e84-11eb-8557-667b5dbde2f5.png)
+
+## Installation
+
+- Install neovim, obviously
+- Copy all files from this folder to `~/.config/nvim/`
+- Install pynvim with `pip install --upgrade pynvim`
+- As soon as you start nvim it will show many warnings. Just run `:PlugInstall` inside nvim to install the recessary plugins.
+- Run `:CocCommand clangd.install` inside nvim to install clangd for linting C code.
+- To change background color to a darker one move onedark.vim from this directory to `~/.local/share/nvim/plugged/onedark.vim/autoload/onedark.vim` (it blends with kitty's background)
 
 ## Important plugins
 

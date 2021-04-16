@@ -9,7 +9,7 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-font xft:URWGothic-Book 11
+font xft:Iosevka Nerd 11
 
 floating_modifier $mod
 
@@ -232,11 +232,12 @@ exec_always --no-startup-id numlockx on
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 #exec --no-startup-id i3status
 exec --no-startup-id redshift
+
 # Theme
 # class                 border  backgr. text    indicator child_border
 client.focused          #99a1b2 #40454f #c9ccd8 #2e9ef4   #99a1b2
-client.focused_inactive #1E222A #1e222a #AFB2BF #484e50   #1e222a
-client.unfocused        #1E222A #1E222A #9397a5 #292d2e   #1e222a
+client.focused_inactive #1E222A #282c35 #AFB2BF #484e50   #1e222a
+client.unfocused        #1E222A #282c35 #9397a5 #292d2e   #1e222a
 client.urgent           #2f343a #900000 #c9ccd8 #900000   #1e222a
 client.placeholder      #000000 #0c0c0c #c9ccd8 #000000   #1e222A
 
