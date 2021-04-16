@@ -9,6 +9,7 @@ let g:startify_bookmarks = [{'c': '~/.config/nvim/init.vim'},
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 map <space>n :NERDTreeToggle<CR>
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && 
 			\ !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | 
@@ -103,7 +104,7 @@ call plug#end()
 function! BufNr() abort
 	let l:bufnr = bufnr('%')
 	let l:bufnr = l:bufnr > 10 ? l:bufnr : nr2char(10121 + l:bufnr).' '
-	return ' '.l:bufnr."   ".winnr().' '
+	return ' '.l:bufnr."  ".winnr().' '
 endfunction
 
 function! FileType() abort
@@ -141,7 +142,7 @@ set mouse=a
 set number relativenumber
 set undofile
 set undodir=$HOME/.vim/undo
-set clipboard=unnamed
+set clipboard^=unnamed
 
 " Asm syntax
 let g:asmsyntax = 'nasm'
