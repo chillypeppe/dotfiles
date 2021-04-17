@@ -30,4 +30,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:E5C07B
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:white\x1e\x2d\x2dbackground\x3dABB2BF
-SETUVAR fish_user_paths:/home/lorenzo/\x2elocal/bin
+SETUVAR fish_user_paths:$HOME/\x2elocal/bin
