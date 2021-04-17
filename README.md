@@ -11,10 +11,14 @@ Needed fonts for polybar and i3:
 - Icomoon Feather
 - Material Design Icons
 
+You can find these in the fonts directory, if you're using arch you can simply move them to `~/.local/share/fonts`.
+
 Needed (and recommended) monospace font for kitty:
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
-Copy the configuration files in `~/.config/`. 
+Copy the configuration files in `~/.config/`.
+
+Install nitrogen and set the wallpaper for the first time (`nitrogen /path/to/image/directory/`), the i3 config will restore the same estore the chosen wallpaper during subsequent sessions
 
 Install [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) for a nice screen lock. If you want to use a different one replace it in `i3/config` and in `polybar/<bar-name>/scripts/powermenu.sh`
 
