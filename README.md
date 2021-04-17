@@ -45,7 +45,6 @@ Section "InputClass"
   Driver "libinput"
   Option "NaturalScrolling" "true"
   Option "Tapping" "on"
-  Option "ClickMethod" "clickfinger"
 EndSection
 ```
 You can check the name of your device with `sudo libinput list-devices`
