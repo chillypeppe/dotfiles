@@ -16,8 +16,10 @@ Needed (and recommended) monospace font for kitty:
 
 Copy the configuration files in `~/.config/`. 
 
-I use [starship](https://starship.rs/) prompt with fish, it looks better than the default one. My configuration is inspired by p10k for zsh. <br>
-For starship just move starship.toml from the config folder to `~/.config/`
+Install [i3lock-fancy](https://github.com/meskarune/i3lock-fancy) for a nice screen lock. If you want to use a different one replace it in `i3/config` and in `polybar/<bar-name>/scripts/powermenu.sh`
+
+I use [starship prompt](https://starship.rs/) with fish, it looks better than the default one. My configuration is inspired by p10k for zsh. <br>
+For starship just move `config/starship.toml` to your `~/.config/`
 
 ### Other notes
 - Use [siduck's verion of onedark](https://github.com/siduck76/dotfiles/tree/master/gtk/siduck-onedark) for the gtk theme (just copy siduck-onedark to `~/.themes`)
