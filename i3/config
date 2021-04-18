@@ -244,7 +244,7 @@ client.placeholder      #000000 #0c0c0c #c9ccd8 #000000   #1e222A
 client.background       #ffffff
 
 # Gaps
-gaps inner 10
+gaps inner 20
 gaps outer 0
 
 smart_gaps on
