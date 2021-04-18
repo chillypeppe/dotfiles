@@ -23,8 +23,8 @@ bindsym $mod+d exec --no-startup-id rofi -no-config -no-lazy-grab -show drun -mo
 
 # Area selection to clipboard
 bindsym --release $mod+Shift+s exec --no-startup-id flameshot gui
-# change focus
 
+# change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -131,9 +131,9 @@ assign [class="firefox"] $ws2
 assign [class="Chromium"] $ws2
 assign [class="code-oss"] $ws4
 assign [class="FreeTube"] $ws5
-assign [class="Org.gnome.Nautilus"] $ws3
-assign [class="Signal"] $ws6
-assign [class="TelegramDesktop"] $ws6
+assign [class="Org.gnome.Nautilus"] $ws6
+assign [class="Signal"] $ws3
+assign [class="TelegramDesktop"] $ws3
 assign [class="Spotify"] $ws7
 
 # Open specific applications in floating mode
@@ -235,9 +235,9 @@ exec --no-startup-id redshift
 
 # Theme
 # class                 border  backgr. text    indicator child_border
-client.focused          #99a1b2 #40454f #c9ccd8 #2e9ef4   #99a1b2
-client.focused_inactive #1E222A #282c35 #AFB2BF #484e50   #1e222a
-client.unfocused        #1E222A #282c35 #9397a5 #292d2e   #1e222a
+client.focused          #99a1b2 #2f343a #c9ccd8 #2e9ef4   #99a1b2
+client.focused_inactive #1E222A #13161c #AFB2BF #484e50   #1e222a
+client.unfocused        #1E222A #13161c #9397a5 #292d2e   #1e222a
 client.urgent           #2f343a #900000 #c9ccd8 #900000   #1e222a
 client.placeholder      #000000 #0c0c0c #c9ccd8 #000000   #1e222A
 

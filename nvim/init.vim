@@ -25,6 +25,7 @@ Plug 'rhysd/vim-grammarous'
 "Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'liuchengxu/vim-clap'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 map <space>b :Clap buffers<CR>
 map <space>e :Clap filer<CR>
 map <space>f :Clap files<CR>
@@ -49,8 +50,7 @@ Plug 'itchyny/lightline.vim'
 let g:lightline = {
 			\ 'colorscheme': 'onedark',
 			\ 'active': {
-			\   'left': [ [ 'bufnr'],
-			\				[ 'mode', 'paste' ],
+			\   'left': [ [ 'mode', 'paste' ],
 			\             [ 'filetype', 'gitbranch', 'readonly', 'modified' ] ],
 			\   'right': [ [ 'lineinfo' ],
 			\              [ 'percent' ],
@@ -104,7 +104,7 @@ call plug#end()
 function! BufNr() abort
 	let l:bufnr = bufnr('%')
 	let l:bufnr = l:bufnr > 10 ? l:bufnr : nr2char(10121 + l:bufnr).' '
-	return ' '.l:bufnr."  ".winnr().' '
+	return ' '.winnr().' '
 endfunction
 
 function! FileType() abort
