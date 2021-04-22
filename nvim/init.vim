@@ -114,7 +114,7 @@ endfunction
 
 function! GitBranch() abort
 	let _ = FugitiveHead()
-	return strlen(_) ? _.'  ' : ''
+	return strlen(_) ? _.' ' : ''
 endfunction
 
 " Nvim behaviour
@@ -138,6 +138,7 @@ set scrolloff=5
 set cursorline
 set colorcolumn=80
 set nofoldenable
+set noshowcmd
 set mouse=a
 set number relativenumber
 set undofile
@@ -170,6 +171,7 @@ nmap <space>wl <C-W>l
 nmap <space>wh <C-W>h
 nmap <space>wj <C-W>j
 nmap <space>wk <C-W>k
+nmap <C-W>k
 nmap <space>cc :CocCommand<CR>
 nmap ]t :tabn<CR>
 nmap [t :tabp<CR>
@@ -178,7 +180,7 @@ map <C-K> :5winc +<CR>
 map <C-J> :5winc -<CR>
 map <C-H> :5winc ><CR>
 map <C-L> :5winc <<CR>
-map <A-M> :%norm.<CR>
+map <C-T> :terminal<CR>
 
 nnoremap <Leader>c :set cursorline!<CR>
 nnoremap <Leader>r :g/^\s*$/d<CR>
@@ -186,8 +188,8 @@ nnoremap <Leader>k :Man<CR>
 tnoremap <Esc> <C-\><C-n>
 "
 " Properties for terminal
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-autocmd StdinReadPre * let s:std_in=1
+autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * startinsert
 "
 " Relative line numbers in normal mode, absolute line numbers in insert mode
 augroup numbertoggle
