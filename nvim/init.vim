@@ -25,6 +25,7 @@ Plug 'rhysd/vim-grammarous'
 "Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'liuchengxu/vim-clap'
+Plug 'preservim/nerdcommenter'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 map <space>b :Clap buffers<CR>
 map <space>e :Clap filer<CR>
@@ -131,8 +132,6 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set number
-set splitbelow
-set splitright
 set noshowmode
 set scrolloff=5
 set cursorline
@@ -143,7 +142,6 @@ set mouse=a
 set number relativenumber
 set undofile
 set undodir=$HOME/.vim/undo
-set clipboard^=unnamed
 
 " Asm syntax
 let g:asmsyntax = 'nasm'
