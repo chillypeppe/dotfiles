@@ -1,4 +1,5 @@
 set $mod Mod4
+exec --no-startup-id setxkbmap it
 
 new_window pixel 1
 new_float normal
@@ -174,28 +175,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Set shut down, restart and locking features
-#bindsym $mod+0 mode "$mode_system"
-#set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id i3lock-fancy, mode "default"
-#    bindsym s exec --no-startup-id i3lock-fancy && systemctl suspend, mode "default"
-#    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-#    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
-#
-    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
 
 bindsym $mod+0 exec --no-startup-id ~/.config/polybar/forest/scripts/powermenu.sh &
 
 # Lock screen shortcut
 bindsym $mod+l exec --no-startup-id i3lock-fancy
-exec --no-startup-id xautolock -time 5 -locker "i3lock-fancy" -killtime 10 -killer "systemctl suspend" -detectsleep
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
+exec --no-startup-id "xset s 300 300; xss-lock -n ~/.config/screenlock/dim-screen.sh --transfer-sleep-lock -- i3lock-fancy --nofork"
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -223,10 +208,10 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id udiskie
 exec --no-startup-id dunst
 exec --no-startup-id copyq
 exec --no-startup-id flameshot
-exec_always --no-startup-id numlockx on
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
@@ -287,9 +272,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-# set power-manager and volume control
-# exec --no-startup-id mate-power-manager
 
 # Media player controls
 bindsym F8 exec --no-startup-id playerctl play-pause
