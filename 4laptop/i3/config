@@ -179,8 +179,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+0 exec --no-startup-id ~/.config/polybar/forest/scripts/powermenu.sh &
 
 # Lock screen shortcut
-bindsym $mod+l exec --no-startup-id i3lock-fancy
-exec --no-startup-id "xset s 300 300; xss-lock -n ~/.config/screenlock/dim-screen.sh --transfer-sleep-lock -- i3lock-fancy --nofork"
+bindsym $mod+l exec --no-startup-id betterlockscreen -l blur
+exec --no-startup-id "xset s 180 120; xss-lock -l -n ~/.config/screenlock/dim-screen.sh -- betterlockscreen -l blur"
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -207,7 +207,7 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id betterlockscreen -w; sleep 1; picom -b
 exec --no-startup-id udiskie
 exec --no-startup-id dunst
 exec --no-startup-id copyq
