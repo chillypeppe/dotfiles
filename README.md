@@ -32,9 +32,13 @@ If you want to use a different one replace it in `i3/config` and in `polybar/<ba
 ##### Laptop configuration
 My main configuration is meant for a desktop pc, but I also provided my laptop-specific configuration files in the `4laptop` directory.
 It differs mainly for the battery and wifi module and for the lockscreen. <br>
-As a lockscreen I switched to [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) which is sensibly faster than i3lock-fancy (it uses a cached blurred background instead of screenshotting and blurring at locking time) and because it's a simple bash script, you can easily customize it. <br>
+
+As lockscreen I switched to [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) which is sensibly faster than i3lock-fancy (it uses a cached blurred background instead of screenshotting and blurring at locking time) and because it's a simple bash script, you can easily customize it. <br>
+
 As you could see on my configuration i use xset and xss-lock to trigger 2 commands after 3 min and 5 min of inactivity. The first turns off the screen, while the second locks it. <br>
-Xss-lock listens to systemd events like suspend and lock, so when it suspends it just locks the screen, so when you wake it up it's locked. You can do this with a systemd service which waits for a target, but I could get that to work as I wanted it. <br>
+
+Xss-lock listens to systemd events like suspend, so when it suspends it makes sure the screen is locked when it wakes up. You can do this with a systemd service which waits for a target, but I couldn't get that to work as I wanted. <br>
+
 Finally, if you want to automatically put your computer to sleep, you can use systemd-logind.service uncommenting and modifying the following lines in `/etc/systemd/logind.conf` and reloading the service:
 ```
 IdleAction=suspend

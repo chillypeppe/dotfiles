@@ -6,6 +6,9 @@ _This config is heavily inspired by [meowmeowxw](https://github.com/meowmeowxw/n
 
 ## Installation
 
+[WARNING]
+I'm switching to lunarvim, so this configuration may not be updated
+
 - Install neovim, obviously
 - Copy all files from this folder to `~/.config/nvim/`
 - Install pynvim with `pip install --upgrade pynvim`
